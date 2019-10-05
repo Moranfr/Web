@@ -1,5 +1,6 @@
 Test
 test1 
-test2
+Zo Z
+Zo has enter the arena
 These are tests by rainbow guy
 Enjoy
