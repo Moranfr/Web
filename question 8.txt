@@ -1,0 +1,60 @@
+#include <stdio.h>
+#define N 5
+int i;
+
+void printArr(int *a);
+void f(int *, int s);
+void secret(int *,int*);
+
+void main()
+
+{
+	int a[N];
+	int i;
+	for (i = 0;i < N;i++)
+	{
+		scanf("%d",a+1);
+	}
+
+	f(a,0,0,N-1);
+	printArr(a);
+
+}
+
+void f(int *arr, int p, int q, int l)
+{
+
+	while (p <= l)
+	{
+		if (arr[p] % 2 != q)
+		{
+			if (arr[l] % 2 == q)
+			{
+				secret(arr+l--,arr+p++);
+			}
+			else
+			
+				l--;
+			}
+		else 
+		{
+			p++;
+			}
+					}
+}
+
+void secret(int *x, int *y)
+{
+	*x^=*y;
+	*y^=*x;
+	*x^=*y;
+
+}
+
+void printArr(int *a)
+{
+	for (;i < N;i++)
+	{
+		printf("%c", *a++);
+	}
+}
